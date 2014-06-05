@@ -9,6 +9,7 @@ Altering the markup that is generated on the WordPress Updates screen was time c
 1. Down the zip from Github.
 2. Upload the zip.
 3. Activate the plugin and browse to Settings->Maintenance Helper.
+4. For plugin updates from Github we recommend you install the following plugin: https://github.com/afragen/github-updater
 
 ##Usage for Maintenance
 

@@ -7,6 +7,7 @@ Version: 1.0
 Author: Bronson Quick
 Author URI: http://www.sennza.com.au
 License: GPL2
+GitHub Plugin URI: https://github.com/sennza/Sennza-Maintenance-Helper
 */
 
 class Sennza_Maintenance_Helper {
