@@ -3,10 +3,11 @@
 Plugin Name: Sennza Maintenance Helper
 Plugin URI: http://www.sennza.com.au
 Description: This plugin generates the html for WordPress plugins, theme and core updates that we can paste into our Mailchimp maintenance email that we send out to clients.
-Version: 1.1
+Version: 1.2
 Author: Bronson Quick
 Author URI: http://www.sennza.com.au
 License: GPL2
+Network: true
 GitHub Plugin URI: https://github.com/sennza/sennza-maintenance-helper
 */
 
@@ -21,11 +22,16 @@ class Sennza_Maintenance_Helper {
 	}
 
 	private function __construct() {
-		add_action( 'admin_menu', array( $this, 'add_options_page' ) );
+		add_action( 'admin_menu',         array( $this, 'add_options_page' ) );
+		add_action( 'network_admin_menu', array( $this, 'add_submenu_page' ) );
 	}
 
 	public function add_options_page() {
 		add_options_page( 'Maintenance Helper', 'Maintenance Helper', 'manage_options', 'maintenance-helper.php', array( $this, 'generate_mailchimp_markup' ) );
+	}
+
+	public function add_submenu_page(){
+		add_submenu_page( 'settings.php', 'Maintenance Helper', 'Maintenance Helper', 'manage_options', 'maintenance-helper.php', array( $this, 'generate_mailchimp_markup' ) );
 	}
 
 	public function generate_mailchimp_markup() { ?>
