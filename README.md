@@ -25,3 +25,4 @@ Altering the markup that is generated on the WordPress Updates screen was time c
 
 ##Screenshot
 
+![Screenshot](screenshot.png?raw=true "Screenshot")
