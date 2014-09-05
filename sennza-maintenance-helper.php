@@ -3,7 +3,7 @@
 Plugin Name: Sennza Maintenance Helper
 Plugin URI: http://www.sennza.com.au
 Description: This plugin generates the html for WordPress plugins, theme and core updates that we can paste into our Mailchimp maintenance email that we send out to clients.
-Version: 1.2.1
+Version: 1.3
 Author: Bronson Quick
 Author URI: http://www.sennza.com.au
 License: GPL2
