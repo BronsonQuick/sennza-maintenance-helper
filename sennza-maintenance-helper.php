@@ -88,6 +88,21 @@ class Sennza_Maintenance_Helper {
 			$markup .= "</ul>";
 		}
 
+		$themes = get_theme_updates();
+
+		if ( ! empty ( $themes ) ) {
+			$markup .= "We have upgraded the following themes on your site:";
+			$markup .= "<ul>";
+			foreach ( (array) $themes as $theme_key => $theme ) {
+
+				$markup .= "<li>";
+				$markup .= $theme['Name'] . ': Version ' . $theme['Version'] . ' to '. $theme->update["new_version"] . '.';
+				$markup .= "</li>";
+
+			}
+			$markup .= "</ul>";
+		}
+
 		$markup .= "<h3>Support For The Month of *|DATE:F Y|*</h3>";
 		$markup .= "During the month of *|DATE:F Y|* we&#39;ve helped you with the following support requests:";
 		$markup .= "<ul>";
